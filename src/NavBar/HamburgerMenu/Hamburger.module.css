@@ -1,0 +1,41 @@
+
+.Hamburger:hover {
+    cursor: pointer;
+}
+@media ( max-width: 500px ){
+    .Hamburger {
+        width: 20px;
+        margin:  10px 0 10px 5px ;
+    }
+    .Hamburger div {
+        background-color: black;
+        height: 3px;
+        margin-bottom: 3px;
+        /* padding: 2px; */
+    }
+}
+@media ( max-width: 414px ){
+    .Hamburger {
+        width: 20px;
+        margin:  10px 0 10px 5px ;
+    }
+    .Hamburger div {
+        background-color: black;
+        height: 3px;
+        margin-bottom: 3px;
+        /* padding: 2px; */
+    }
+}
+@media ( max-width: 375px ){
+    .Hamburger {
+        padding-top: 5px ;
+        width: 20px;
+        margin: 10px 0 10px 5px ;
+    }
+    .Hamburger div {
+        background-color: black;
+        height: 3px;
+        margin-bottom: 3px;
+        /* padding: 2px; */
+    }
+}

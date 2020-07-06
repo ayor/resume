@@ -1,0 +1,25 @@
+.SideDrawer {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    top:0;
+    z-index: 200;
+    position: fixed;
+    margin: 0;
+    animation: slideIn 2s ease-in;
+}
+
+@keyframes slideIn {
+    0%{
+        margin-right: 100%;
+    }
+    50%{
+        margin-right: 50%;
+    }
+
+    100%{
+        margin-right: 0;
+    }
+
+}
+

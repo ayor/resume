@@ -1,0 +1,28 @@
+.SideNav img{
+    margin: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.Logo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.SideNav ul {
+    display: flex;
+    flex-flow: column; 
+    list-style: none;
+    padding-inline-start: 5px !important;
+}
+.SideNav li {
+    margin-bottom: 20px;
+    padding: 5px;
+    font : 12px;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.SideNav a{
+    color: gray;
+    text-decoration: none;
+}
+

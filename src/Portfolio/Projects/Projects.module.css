@@ -1,0 +1,12 @@
+.ProjectInfo {
+        color: gray;
+        font-size: 13px;
+}
+@media (min-width: 1024px){
+    .ProjectInfo {
+        display: flex;
+    }
+    .ProjectImages {
+
+    }
+}
