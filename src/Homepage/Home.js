@@ -53,11 +53,17 @@ const home = props => {
                                 My name is Dosumu Ayomide Oluwaseun. I am a Software Developer based in Lagos, Nigeria
                                 who loves converting rigorous end -
                             end business processes to easy,time saving, efficient and reusuable tools.</p>
-                            <div>
+                            <div style={{
+                                margin: '2px 10px',
+                                backgroundColor: "#E6D9C8",
+                                padding: "5px",
+                                borderRadius: "30px"
+                            }}>
                                 <a style={{
                                     color:"gray",
                                     fontWeight : "bolder",
-                                    fontSize : "20px"
+                                    fontSize : "15px",
+                                    textDecoration: "none"
                                 }} 
                                 href="mailto:dosumuayomide@gmail.com">Say Hi</a>
                             </div>

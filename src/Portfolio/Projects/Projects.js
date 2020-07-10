@@ -40,11 +40,19 @@ const project = props => {
                 </div>
             </div>
             
-            <p><a 
+            <div style={{
+                                margin: '2px 10px',
+                                backgroundColor: "#E6D9C8",
+                                padding: "5px",
+                                borderRadius: "30px",
+                                textAlign : "Center"
+                            }}><a 
             style={{               
-                color: 'gray'
+                color: 'gray',
+                textDecoration: "none",
+                fontSize : "12px"
             }}
-            href='https://github.com/ayor' > Check Github </a></p>
+            href='https://github.com/ayor' > Check Github </a></div>
         </div>
         </StyleRoot>
     )
