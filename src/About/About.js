@@ -8,21 +8,41 @@ import { connect } from 'react-redux';
 import * as actionTypes from '../store/actions';
 import Footer from '../Footer/Footer';
 import portfolioImage from '../assets/portfolio.PNG';
+import Radium, { StyleRoot } from 'radium';
+import { fadeIn, 
+    bounceInRight, 
+    bounceInDown, 
 
+} from 'react-animations';
+
+const styles = {
+    fadeIn : {
+        animation: 'x 1s',
+        animationName : Radium.keyframes(fadeIn,'fadeIn')
+    },
+    bounceInDown : {
+        animation: 'x 1s',
+        animationName : Radium.keyframes(bounceInDown,'bounceInDown')
+    },
+    bounceInRight : {
+        animation: 'x 2s',
+        animationName : Radium.keyframes(bounceInRight,'bounceInRight')
+    }
+}
 
 const aboutMe = props => {
     let sidebar = null
     if (props.globalState.showSideNav) {
-        sidebar = ([<Backdrop />,
-        <SideDrawer />])
+        sidebar = <SideDrawer />
     }
     return (
-        <div className={classes.About}>
+        <StyleRoot>
+        <div className={classes.About} style={styles.fadeIn}>
             {sidebar}
             <Navbar location='About Me' />
             <div className={classes.Body}>
-                <img src={img1} alt='user' height='550' width='450' />
-                <div className={classes.Content}>
+                <img src={img1} alt='user' height='550' width='450' style={styles.bounceInDown} />
+                <div className={classes.Content} style={styles.bounceInRight}>
                     <h2> Dosumu Ayomide </h2>
                     <p>
                         My name is Dosumu Ayomide Oluwaseun. I am a Software Developer based in Lagos, Nigeria who 
@@ -50,6 +70,7 @@ const aboutMe = props => {
             </div>
             <Footer />
         </div>
+        </StyleRoot>
     )
 }
 

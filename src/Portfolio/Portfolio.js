@@ -7,6 +7,19 @@ import { Route } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import Projects from "./Projects/Projects";
 import { connect } from 'react-redux';
+import Radium, { StyleRoot } from 'radium';
+import {
+    fadeIn,
+    zoomIn
+
+} from 'react-animations';
+
+const styles = {
+    fadeIn: {
+        animation: 'x 1s',
+        animationName: Radium.keyframes(fadeIn, 'fadeIn')
+    }
+}
 
 class Portfolio extends Component {
 
@@ -16,10 +29,10 @@ class Portfolio extends Component {
 
     toggleProjectHandler = (pathname) => {
         //check the current pathname 
-        if(this.props.location.pathname ===  pathname){
+        if (this.props.location.pathname === pathname) {
             this.setState({ projectDetailisOpened: !this.state.projectDetailisOpened });
             this.props.history.push('/portfolio');
-        }else {
+        } else {
             this.props.history.push(pathname);
         }
 
@@ -28,34 +41,38 @@ class Portfolio extends Component {
     render() {
         let sidebar = null;
         if (this.props.globalState.showSideNav) {
-            sidebar = ([<Backdrop />,
-            <SideDrawer />])//clicked={props.onToggleSideDrawer}//clicked={props.onToggleSideDrawer}
+            sidebar = <SideDrawer />;
         }
+        
         return (
-            <div className={classes.Portfolio_content}>
-                {sidebar}
-                <NavBar location='Portfolio' />
-                <div className={classes.Portfolio} >
-                    {this.props.globalState.projects.map((project, index) => {
-                        return (<div key={index}>
-                            <div onClick={() => this.toggleProjectHandler(project.pathname)} 
-                            className={classes.ProjectLink}>
-                                <span>{project.name}</span>
-                                <i className="fa fa-chevron-down" aria-hidden="true"></i>
-                            </div>
-                            < Route path={project.pathname}
-                                render={() => (<Projects
-                                    Description={project.Description}
-                                    imgSrc={project.imgSrc}
-                                    imgSrc2={project.imgSrc2}
-                                    imgSrc1={project.imgSrc1}
-                                    link={project.projectLink} />)} />
-                        </div>)
-                    })}
+            <StyleRoot>
+                <div className={classes.Portfolio_content} style={styles.fadeIn}>
+                    {sidebar}
+                    <NavBar location='Portfolio' />
+                    <div className={classes.Portfolio} >
+                        {this.props.globalState.projects.map((project, index) => {
+                            return (
+                                <div key={index}>
+                                    <div onClick={() => this.toggleProjectHandler(project.pathname)}
+                                        className={classes.ProjectLink}
+                                        >
+                                        <span>{project.name}</span>
+                                        <i className="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </div>
+                                    < Route path={project.pathname}
+                                        render={() => (<Projects
+                                            Description={project.Description}
+                                            imgSrc={project.imgSrc}
+                                            imgSrc2={project.imgSrc2}
+                                            imgSrc1={project.imgSrc1}
+                                            link={project.projectLink} />)} />
+                                </div>)
+                        })}
 
+                    </div>
+                    <Footer />
                 </div>
-                <Footer />
-            </div>)
+            </StyleRoot>)
     }
 };
 
