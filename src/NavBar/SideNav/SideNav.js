@@ -22,7 +22,7 @@ const sideNav = props => {
                 <li><NavLink to='/' >Home</NavLink></li>
                 <li><NavLink to='/about' >About Me</NavLink></li>
                 <li><NavLink to='/portfolio' >Portfolio</NavLink></li>
-                <li><NavLink to='/' >Community</NavLink></li>
+                {/* <li><NavLink to='/' >Community</NavLink></li> */}
             </ul>
         </div>
 
