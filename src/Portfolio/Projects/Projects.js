@@ -1,12 +1,29 @@
 import React from 'react';
 import classes from './Projects.module.css';
+import Radium, { StyleRoot } from 'radium';
+import {
+    fadeIn,
+    zoomIn
 
+} from 'react-animations';
+
+const styles = {
+    fadeIn: {
+        animation: 'x 1s',
+        animationName: Radium.keyframes(fadeIn, 'fadeIn')
+    },
+    zoomIn: {
+        animation: 'x 1s',
+        animationName: Radium.keyframes(zoomIn, 'zoomIn')
+    }
+}
 
 const project = props => {
 
     let desc = props.Description.split('.');
     return (
-        <div>
+        <StyleRoot>
+        <div style={styles.zoomIn}>
             <div className={classes.ProjectInfo}>
                 <div>
                     {desc.map((el, ind) => <p key={ind}>{el}</p>)}
@@ -23,16 +40,13 @@ const project = props => {
                 </div>
             </div>
             
-            <button
-                    style={{
-                        margin: '2px 30px',
-                        width: '80%',
-                        backgroundColor: '#E6D9C8',
-                        padding: '10px',
-                        border: 'none',
-                        borderRadius: '30px'
-                    }}> Check Github </button>
+            <p><a 
+            style={{               
+                color: 'gray'
+            }}
+            href='https://github.com/ayor' > Check Github </a></p>
         </div>
+        </StyleRoot>
     )
 };
 

@@ -5,7 +5,9 @@ import { NavLink } from "react-router-dom";
 import { connect } from 'react-redux';
 import * as actionTypes from '../../store/actions';
 
-const sideNav = props => (
+const sideNav = props => {
+    
+    return(
     <nav className={classes.SideNav}>
         <div className={classes.Logo}>
             <img src={logo}  height='50' alt="Ay's Logo" />
@@ -25,7 +27,7 @@ const sideNav = props => (
         </div>
 
     </nav>
-);
+)};
 
 const mapActionsToProps = dispatch => {
     return {

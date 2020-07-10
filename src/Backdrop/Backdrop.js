@@ -9,7 +9,7 @@ const backdrop = (props) => (
         zIndex:'100',
         top:'0',
         position:'fixed',
-        backgroundColor:'rgba(196, 196, 196, 0.3)'
+        backgroundColor:'white'
     }} 
     onClick={props.onToggleSideDrawer}>
     </div>
