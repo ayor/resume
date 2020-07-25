@@ -2,6 +2,9 @@
         color: gray;
         font-size: 13px;
 }
+.ProjectImages img{
+    margin: 2%;
+}
 @media (min-width: 1024px){
     .ProjectInfo {
         display: flex;

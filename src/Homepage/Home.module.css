@@ -1,154 +1,310 @@
 
+:root{
+    font-family: cursive;
+    color: #ffd059;
+    font-weight: 400;
+    background-color: rgb(19, 18, 18);
+}
 .Home {
     min-height: 100vh;
+    /* padding-bottom: 2.5em; */
     position: relative;
 }
-.Content {
-    padding-bottom: 2.5em;
+.Content {  
     text-align: left;
-    margin: 0 2%;
-    font-family: sans-serif;
-    color: gray;
-
+    position: relative;
+    top: -18%;
+    left: 38%;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 70px;
+    z-index: 2;
+    width: 60%;
+    letter-spacing: 2px;
 }
-.Home button {
-    margin: 25px;
-    width: 50%;
-    background-color: #E6D9C8;
-    border-radius: 30px;
-    border: none;
-    padding: 10px;
+
+.Body{
+    margin-top:10% ;
+}
+
+.Body img {
+    position: absolute;
+    height: 750px;
+    z-index: 1;
+    /* border-radius: 10px; */
+}
+.Content ul {
+    position: relative;
+    left: 40%;
+    list-style: none;
+}
+
+.Content ul li{
+    line-height: 11px;
+}
+
+.Content ul a {
+    text-decoration: none;
+    color: #ffd059;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.Content ul a:hover {
+    font-size: 18px;
+    color: #c2bfb7;
+}
+
+.HomeButton {
+        margin: 0 15%;
+        width: 20%;
+        text-align: center;
+}
+
+.HomeButton a {
+    color: gray;
+    font-weight: bolder;
+    font-size: 25px;
+    text-decoration: underline;
 }
 button:hover {
     cursor: pointer;
 }
-.Content h2 {
-    font-family: sans-serif;
-    /* text-transform: lowercase; */
-    text-decoration: wavy;
-    font-size: 70px;
-    /* margin: 0px !important; */
-}
+
 @media (min-width:1024px){   
     .Home .Body {
         text-align: center;        
         display: flex;
-        height: 700px;
-        padding: 0 5px;
+        padding: 0 6%;
+        box-sizing: border-box;
      }
      .Home .Body img {
         width: 60%;
+        height: 60%;
 
     } 
-    .Home button {
-        margin: 25px;
-        width: 50%;
-        background-color: #E6D9C8;
-        border-radius: 30px;
-        border: none;
-        padding: 10px;
-    }
     button:hover {
         cursor: pointer;
     }
     .Home .Content{
-        padding:50px 50px;
+        padding:-15px 50px;
         /* box-sizing: border-box; */
     }
 }
 @media (max-width:1024px){   
+    .Home{
+        margin: 0 5%;
+        min-height: 210vh;
+    }
+    .Home .Content{
+        width: 150%;
+        font-size: 80px;
+        padding: 0 1%;
+        left: 140%;
+    }
+    .Body {
+        width: 100%;
+        }
+.HomeButton{
+    position: relative;
+    left: 35%;  
+    width: 100%;
+}
 
-    .Home .Body img {
-        height: 70%;
-        border-radius: 20px;
+    .Content ul li{
+        line-height: 35px;
+    }
+.Content ul {
+    left: 100%;
+    width: 100%;
+
+}
+    .Content ul a {
+        font-size: 40px;
+        font-weight: 500;
     }
 
-     .Home .Body {
-        text-align: center;        
-        display: flex;
-        height: 1000px;
-     }
-    .Home .Body img {
-        width: 90%;
-    } 
 .Content{
     margin: 0;
     padding: 20px 10px;
     font-size: 25px;
 }
-.Content h2 {
-    font-size: 50px;
+
+.Home .Body img {
+    margin-top: 7%;
+    width: 180%;
+    height: 80%;
 }
 
+.HomeButton a {
+    font-size: 70px;
+    font-weight: 900;
+}
 }
 @media (max-width:768px){   
 
-     .Home .Body {
-        text-align: center;        
-        display: block;
-     }
-    .Home .Body img {
-        width: 70%;
-        height: 50%;
-    } 
-.Content{
-    margin: 0;
-    padding: 20px 50px;
-    line-height: 20px;
-    font-size: 14px;
-}
-.Content h2 {
-    font-size: 40px;
+    .Home{
+        margin: 0 5%;
+        min-height: 250vh;
+    }
+    .Home .Content{
+        width: 150%;
+        font-size: 80px;
+        padding: 0 1%;
+        left: 140%;
+    }
+    .Body {
+        width: 100%;
+    }
+    .Home .Content {
+       
+        margin-right: 0%!important;
+    }
+.HomeButton{
+    position: relative;
+    left: 45%;  
+    width: 50%;
 }
 
+    .Content ul li{
+        line-height: 25px;
+    }
+.Content ul {
+    left: 100%;
+    width: 100%;
+
+}
+    .Content ul a {
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+.Content{
+    margin: 0;
+    padding: 20px 10px;
+    font-size: 25px;
+}
+
+.Home .Body img {
+    margin-top: 7%;
+    height: 80%;
+}
+
+.HomeButton a {
+    font-size: 0px;
+    font-weight: 900;
+}
 }
 @media (max-width:414px){
     .Home {
-        position: relative;
-        height: 60vh;
+        min-height: 290vh ;
     }
-    .Home .Body {
-        text-align: center;   
-        display: block;     
-        
-     }
-    .Home .Body img {
-        width: 80%;
-        height: 250px;
-    } 
-    .Content {
-        padding-bottom: 2.5em;        
-        text-align: center;
-        margin: 0 2%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    .Home .Body img{
+        left: 65px;        
+        height:65% 
     }
-.Content h2 {
 
-    font-size: 30px;
-}}
+    .Home .Content {
+        top: 1100px;
+        width: 800px;
+        text-align: center;
+        line-height: normal;
+        font-size: 45px;
+        font-weight: 900;
+    }
+
+    .Home ul {
+        width: 700px;
+    }
+    .Home ul a{
+        font-size: 30px!important;
+        line-height: 45px;
+        font-weight: 900;
+    }
+
+    .HomeButton {
+        left: 10px;
+    }
+    .HomeButton a {
+        font-size: 60px;
+        font-weight: 900;
+    }}
 @media (max-width:375px){
     .Home {
-        position: relative;
-        height: 60vh;
+        min-height: 250vh ;
     }
-    .Home .Body {
-        text-align: center;   
-        display: block;     
-        
-     }
-    .Home .Body img {
-        width: 80%;
-        height: 250px;
-    } 
-    .Content {
-        padding-bottom: 2.5em;        
-        text-align: center;
-        margin: 0 2%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    .Home .Body img{
+        left: 40px;        
+        height:70% 
     }
-.Content h2 {
 
-    font-size: 30px;
-}}
+    .Home .Content {
+        top: 1100px;
+        width: 800px;
+        text-align: center;
+        line-height: normal;
+        font-size: 45px;
+        font-weight: 900;
+    }
+
+    .Home ul {
+        width: 700px;
+    }
+    .Home ul a{
+        font-size: 30px!important;
+        line-height: 45px;
+        font-weight: 900;
+    }
+
+    .HomeButton {
+        left: 10px;
+    }
+    .HomeButton a {
+        font-size: 60px!important;
+        font-weight: 900;
+    }
+
+   }
+
+
+@media (max-width:411px){
+    .Home {
+        min-height: 280vh ;
+    }
+    .Home .Body img{
+        left: 40px;        
+        height:70% 
+    }
+
+    .Home .Content {
+        top: 1100px;
+        width: 800px;
+        text-align: center;
+        line-height: normal;
+        font-size: 45px;
+        font-weight: 900;
+    }
+
+    .Home ul {
+        width: 700px;
+    }
+    .Home ul a{
+        font-size: 30px!important;
+        line-height: 45px;
+        font-weight: 900;
+    }
+
+    .HomeButton {
+        left: 10px;
+    }
+    .HomeButton a {
+        font-size: 60px!important;
+        font-weight: 900;
+    }
+
+   }
+@media (max-height:667px){
+    .Home {
+        min-height: 300vh ;
+    }
+   }

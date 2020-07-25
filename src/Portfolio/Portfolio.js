@@ -47,8 +47,6 @@ class Portfolio extends Component {
         return (
             <StyleRoot>
                 <div className={classes.Portfolio_content} style={styles.fadeIn}>
-                    {sidebar}
-                    <NavBar location='Portfolio' />
                     <div className={classes.Portfolio} >
                         {this.props.globalState.projects.map((project, index) => {
                             return (
