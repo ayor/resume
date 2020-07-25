@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import SideDrawer from '../SideDrawer/SideDrawer';
-import NavBar from '../NavBar/NavBar';
 import classes from './Portfolio.module.css';
-import Backdrop from '../Backdrop/Backdrop';
 import { Route } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import Projects from "./Projects/Projects";
@@ -10,7 +8,6 @@ import { connect } from 'react-redux';
 import Radium, { StyleRoot } from 'radium';
 import {
     fadeIn,
-    zoomIn
 
 } from 'react-animations';
 
