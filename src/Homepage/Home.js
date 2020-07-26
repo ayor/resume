@@ -74,7 +74,7 @@ const home = props => {
                                             styles.bounceInRight
                                         }>
                                             <div className="card-title">
-                                                <h3 className="text-dark my-2"><u>Amazing Projects</u></h3>
+                                                <h4 className="text-dark my-2"><u>Amazing Projects</u></h4>
                                             </div>
                                             <div className="card-subtitle">
                                                 <p className="font-weight-bold text-dark">Take a deep dive into amazing projects i have built so far</p>
@@ -92,7 +92,7 @@ const home = props => {
                                             styles.bounceInRight
                                         }>
                                         <div className="card-title">
-                                            <h3 className="text-dark my-2"><u>None tech stuff</u></h3>
+                                            <h4 className="text-dark my-2"><u>None tech stuff</u></h4>
                                         </div>
                                         <div className="card-subtitle">
                                             <p className="font-weight-bold text-dark">Get to know Ayo</p>
