@@ -1,21 +1,16 @@
 import React from 'react';
-import Home from './Homepage/Home';
-import About from './About/About';
-import Portfolio from './Portfolio/Portfolio';
+import Layout from './Layout';
 
 import {
   BrowserRouter as Router,
   Switch,
-  Route
 } from 'react-router-dom';
 
 
 const App = () => (
   <Router>
     <Switch>
-      <Route path='/portfolio' component={Portfolio} />
-      <Route path='/about' component={About} />
-      <Route path='/' component={Home} />
+      <Layout /> 
     </Switch>
   </Router>
 

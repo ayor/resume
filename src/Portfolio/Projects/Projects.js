@@ -25,7 +25,9 @@ const project = props => {
         <StyleRoot>
         <div style={styles.zoomIn}>
             <div className={classes.ProjectInfo}>
-                <div>
+                <div style={{
+                    width: "100%"
+                }}>
                     {desc.map((el, ind) => <p key={ind}>{el}</p>)}
 
                     <p ><a style={{
