@@ -2,7 +2,8 @@ import React from 'react';
 // import myImg from '../assets/biggerScreen1.PNG';
 import myImg from '../assets/portfolio.jpg';
 import myImg1 from '../assets/init.JPG';
-import myImg2 from '../assets/init1.JPG';
+//import myImg2 from '../assets/init1.JPG';
+import myImg2 from '../assets/init12.jpg';
 import { connect } from "react-redux";
 import { NavLink } from 'react-router-dom';
 import Radium, { StyleRoot } from 'radium';
@@ -52,24 +53,27 @@ const home = props => {
                         <div className="row" >
                             <div className="col col-12 my-3 col-md-6 col-lg-4">
                                 <div className="card">
-                                    <div className="card-body" >
-                                        <NavLink to='/about'><img src={myImg2} className="card-img-bottom" alt="" /></NavLink>
-                                        <div style={
-                                            styles.bounceInRight
-                                        }><div className="card-title" >
-                                                <h4 className="text-dark my-2"><u>Get to know me</u></h4>
-                                            </div>
-                                            <div className="card-subtitle">
-                                                <p className="font-weight-bold text-dark">I am a Software Developer based in Lagos, Nigeria who loves converting rigorous end - end business processes to easy, time saving, efficient and reusuable tools.</p>
+                                    <NavLink to='/about'>
+                                        <div className="card-body" >
+                                            <img src={myImg2} className="card-img-bottom" alt="" />
+                                            <div style={
+                                                styles.bounceInRight
+                                            }><div className="card-title" >
+                                                    <h4 className="text-dark my-2"><u>Get to know me</u></h4>
+                                                </div>
+                                                <div className="card-subtitle">
+                                                    <p className="font-weight-bold text-dark">I am a Software Developer based in Lagos, Nigeria who loves converting rigorous end - end business processes to easy, time saving, efficient and reusuable tools.</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </NavLink>
                                 </div>
                             </div>
                             <div className="col col-12 my-3 col-md-6 col-lg-4">
                                 <div className="card">
+                                <NavLink to='/portfolio'>
                                     <div className="card-body">
-                                        <NavLink to='/portfolio'><img src={myImg} className="card-img-bottom" alt="" /></NavLink>
+                                        <img src={myImg} className="card-img-bottom" alt="" />
                                         <div style={
                                             styles.bounceInRight
                                         }>
@@ -81,6 +85,7 @@ const home = props => {
                                             </div>
                                         </div>
                                     </div>
+                                    </NavLink>
                                 </div>
 
                             </div>
@@ -91,14 +96,14 @@ const home = props => {
                                         <div style={
                                             styles.bounceInRight
                                         }>
-                                        <div className="card-title">
-                                            <h4 className="text-dark my-2"><u>None tech stuff</u></h4>
+                                            <div className="card-title">
+                                                <h4 className="text-dark my-2"><u>None tech stuff</u></h4>
+                                            </div>
+                                            <div className="card-subtitle">
+                                                <p className="font-weight-bold text-dark">Get to know Ayo</p>
+                                            </div>
                                         </div>
-                                        <div className="card-subtitle">
-                                            <p className="font-weight-bold text-dark">Get to know Ayo</p>
-                                        </div>
-                                        </div>
-                                        
+
                                     </div>
                                 </div>
 
